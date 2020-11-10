@@ -40,7 +40,7 @@ function Header({ heading }: {| heading: string | Node |}) {
   }
 
   return (
-    <Box display="flex" justifyContent="center" padding={8}>
+    <Box display="flex" justifyContent="center" paddingY={4} paddingX={8}>
       <Heading size="md" accessibilityLevel={1}>
         {heading}
       </Heading>
@@ -139,6 +139,7 @@ const ModalWithForwardRef: React$AbstractComponent<
                 display="flex"
                 direction="column"
                 width="100%"
+                padding={4}
               >
                 {heading && (
                   <div
@@ -154,6 +155,7 @@ const ModalWithForwardRef: React$AbstractComponent<
                   overflow="auto"
                   onScroll={updateShadows}
                   ref={content}
+                  marginTop={4}
                 >
                   {children}
                 </Box>
